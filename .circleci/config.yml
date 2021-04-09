@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cimg/ruby:2.4.1
+      - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "A first hello"
@@ -11,14 +11,14 @@ jobs:
       
   testa:
     docker:
-      - image: cimg/ruby:2.4.1
+      - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "A more familiar hi"
       - run: sleep 5
   testb:
     docker:
-      - image: cimg/ruby:2.4.1
+      - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "A localized Salut"
@@ -27,7 +27,7 @@ jobs:
       
   deploy:
     docker:
-      - image: cimg/ruby:2.4.1
+      - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "A final goodbye"
